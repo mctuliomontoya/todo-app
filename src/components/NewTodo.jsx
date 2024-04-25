@@ -10,8 +10,8 @@ export default function Todo() {
   const handleEditClick = () => setEditing(!editing);
 
   return (
-    <div className="todo">
-      <label htmlFor="checkbox">
+    <div className="todo flex flex-row">
+      <label htmlFor="checkbox" className="flex flex-row">
         <div>
           <input
             type="checkbox"
