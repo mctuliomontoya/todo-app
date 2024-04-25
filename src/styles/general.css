@@ -1,0 +1,10 @@
+Label {
+    display: flexbox;
+    background-color: aqua;
+    flex-direction: row;
+    align-items: center;
+}
+
+Input {
+    background-color: red;
+}
