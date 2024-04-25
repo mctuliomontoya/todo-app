@@ -1,15 +1,15 @@
-import * as React from "react"
-import "../styles/general.css"
+import * as React from "react";
+import "../styles/general.css";
 
-export default function Todo () {
-  const [label, setLabel] = React.useState("Learn React")
-  const [completed, setCompleted] = React.useState(false)
-  const [editing, setEditing] = React.useState(false)
+export default function Todo() {
+  const [label, setLabel] = React.useState("Learn React!");
+  const [completed, setCompleted] = React.useState(false);
+  const [editing, setEditing] = React.useState(false);
 
-  const handleCheckboxClick = () => setCompleted(!completed)
-  const handleEditClick = () => setEditing(!editing)
+  const handleCheckboxClick = () => setCompleted(!completed);
+  const handleEditClick = () => setEditing(!editing);
 
-  return ( 
+  return (
     <div className="todo">
       <label htmlFor="checkbox">
         <div>
@@ -22,17 +22,12 @@ export default function Todo () {
           <span />
         </div>
         {editing === true ? (
-          <input
-            type="text"
-            value={label}
-          />
+          <input type="text" value={label} />
         ) : (
           <span>{label}</span>
         )}
       </label>
-      <button onClick={handleEditClick}>
-        {editing ? "Save" : "Edit"}
-      </button>
+      <button onClick={handleEditClick}>{editing ? "Save" : "Edit"}</button>
     </div>
-  )
+  );
 }
